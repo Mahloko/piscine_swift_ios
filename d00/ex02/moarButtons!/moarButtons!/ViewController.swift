@@ -1,6 +1,6 @@
 //
 //  ViewController.swift
-//  helloWorld
+//  moarButtons!
 //
 //  Created by Mpho MAHLOKO on 2019/10/07.
 //  Copyright © 2019 Mpho MAHLOKO. All rights reserved.
@@ -15,8 +15,6 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
 
-    @IBAction func clickMe(_ sender: Any) {
-        print("Hello World !")
-    }
-    
+
 }
+
