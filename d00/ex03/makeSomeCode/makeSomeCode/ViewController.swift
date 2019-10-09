@@ -9,7 +9,13 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    @IBOutlet weak var labelView: UILabel!
+    
+    @IBAction func numBtnClicked(_ sender: UIButton) {
+        labelView.text = String(sender.tag)
+        print(sender.tag)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
