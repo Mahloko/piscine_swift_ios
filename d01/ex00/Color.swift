@@ -1,8 +1,8 @@
 enum Color : String {
-    case hearts = "hearts"
-    case spades = "spades"
-    case diamonds = "diamonds"
-    case clubs = "clubs"
-    static let allColors : [Color] = [hearts, diamonds, spades, clubs]
+    case Heart = "hearts"
+    case Spade = "spades"
+    case Diamond = "diamonds"
+    case Club = "clubs"
+    static let allColors : [Color] = [Heart, Diamond, Spade, Club]
     
 }
