@@ -16,8 +16,8 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KtJ-1a-UL2">
-                                <rect key="frame" x="184" y="353" width="46" height="30"/>
-                                <state key="normal" title="Button"/>
+                                <rect key="frame" x="155.66666666666666" y="353" width="102.99999999999997" height="30"/>
+                                <state key="normal" title="Go to 2nd view"/>
                                 <connections>
                                     <segue destination="kIQ-Cw-xK7" kind="show" identifier="segueIdentifier" id="r9D-e0-47Y"/>
                                 </connections>
@@ -30,9 +30,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Toto" id="ydm-d8-Rgi">
-                        <barButtonItem key="rightBarButtonItem" title="Item" id="OcL-8f-vc7"/>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" title="Toto" id="ydm-d8-Rgi"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -43,28 +41,32 @@
         <scene sceneID="WV6-zb-kP3">
             <objects>
                 <viewController id="kIQ-Cw-xK7" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="iia-sd-dTb">
+                    <view key="view" contentMode="scaleToFill" id="iia-sd-dTb" customClass="SecondViewController">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Second View" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qJ8-W6-DNT">
-                                <rect key="frame" x="131" y="357.66666666666669" width="152" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ugf-Gf-8PC">
+                                <rect key="frame" x="190" y="353" width="34" height="30"/>
+                                <state key="normal" title="Back"/>
+                                <connections>
+                                    <action selector="backButton" destination="iia-sd-dTb" eventType="touchUpInside" id="CgK-72-q7C"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="qJ8-W6-DNT" firstAttribute="leading" secondItem="mrf-fe-Y1u" secondAttribute="leading" constant="131" id="8mt-on-Q0q"/>
-                            <constraint firstItem="qJ8-W6-DNT" firstAttribute="centerY" secondItem="iia-sd-dTb" secondAttribute="centerY" id="DPz-5R-aDO"/>
-                            <constraint firstItem="qJ8-W6-DNT" firstAttribute="centerX" secondItem="iia-sd-dTb" secondAttribute="centerX" id="RKC-jq-i43"/>
+                            <constraint firstItem="ugf-Gf-8PC" firstAttribute="centerX" secondItem="iia-sd-dTb" secondAttribute="centerX" id="B8S-hh-zVj"/>
+                            <constraint firstItem="ugf-Gf-8PC" firstAttribute="centerY" secondItem="iia-sd-dTb" secondAttribute="centerY" id="x5c-tN-uUA"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="mrf-fe-Y1u"/>
                     </view>
                     <navigationItem key="navigationItem" id="4iV-7O-hU8"/>
+                    <connections>
+                        <segue destination="xea-Zp-ObC" kind="unwind" identifier="backSegue" unwindAction="unWindSegueWithSegue:" id="hwj-wa-7KW"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5p3-4B-2Gv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="xea-Zp-ObC" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="1802.8985507246377" y="138.58695652173915"/>
         </scene>

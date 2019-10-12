@@ -9,10 +9,8 @@
 import UIKit
 
 class ViewController: UIViewController {
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "segueIdentifier" {
-            segue.destination
-        }
+    @IBAction override func unwind(for unwindSegue: UIStoryboardSegue, towards subsequentVC: UIViewController) {
+        print(unwindSegue.identifier!)
     }
 }
 
